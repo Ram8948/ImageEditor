@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/mainFragment">
+
+    <!-- MainFragment -->
+    <fragment android:id="@+id/mainFragment"
+              android:name="com.ramosoft.imageeditor.MainFragment"
+              android:label="fragment_main"
+              tools:layout="@layout/fragment_main">
+        <action android:id="@+id/action_mainFragment_to_editFragment"
+                app:destination="@id/viewBalanceFragment"
+                app:popEnterAnim="@anim/fade_in"
+                app:popExitAnim="@anim/fade_out"
+                app:enterAnim="@anim/fade_in"
+                app:exitAnim="@anim/fade_out"
+        />
+    </fragment>
+    <!-- ViewBalanceFragment -->
+    <fragment android:id="@+id/viewBalanceFragment"
+              android:name="com.ramosoft.imageeditor.EditFragment"
+              android:label="Edit Image"
+              tools:layout="@layout/fragment_edit_image"/>
+
+</navigation>
